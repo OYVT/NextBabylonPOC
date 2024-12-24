@@ -1,0 +1,45 @@
+// For format details, see https://aka.ms/devcontainer.json. For config options, see the
+// README at: https://github.com/devcontainers/templates/tree/main/src/typescript-node
+{
+	"name": "Oreal WebApp",
+ 	"dockerComposeFile": "docker-compose.yml",
+	"service": "webapp",
+	"workspaceFolder": "/workspaces/${localWorkspaceFolderBasename}",
+	"shutdownAction": "stopCompose",
+	//"workspaceFolder": "/workspaces/${containerFolder}",
+
+	// Features to add to the dev container. More info: https://containers.dev/features.
+	// "features": {},
+
+	// Set *default* container specific settings.json values on container create.
+	//"settings": {},
+
+	// Use 'forwardPorts' to make a list of ports inside the container available locally.
+	"forwardPorts": [3000],
+	"portsAttributes": {
+		"3000": {
+			"label": "WebApp",
+			"onAutoForward": "openBrowserOnce"
+		}
+	},
+
+	// Configure tool-specific properties.
+	// "customizations": {},
+
+	// Uncomment to connect as root instead. More info: https://aka.ms/dev-containers-non-root.
+	// "remoteUser": "root"
+
+	"postCreateCommand": "pnpm install",
+	"postAttachCommand": "pnpm dev",
+	"customizations": {
+		"vscode": {
+			"extensions": [
+				"ms-azuretools.vscode-docker",
+				"dbaeumer.vscode-eslint",
+				"GitHub.vscode-pull-request-github",
+				"esbenp.prettier-vscode",
+				"ms-ossdata.vscode-postgresql"
+			]
+		}
+	}
+}
