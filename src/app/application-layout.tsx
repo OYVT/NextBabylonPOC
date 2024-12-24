@@ -28,6 +28,7 @@ import {
   ChevronDownIcon,
   ChevronUpIcon,
   Cog8ToothIcon,
+  CubeIcon,
   LightBulbIcon,
   PlusIcon,
   ShieldCheckIcon,
@@ -141,6 +142,10 @@ export function ApplicationLayout({
               <SidebarItem href="/settings" current={pathname.startsWith('/settings')}>
                 <Cog6ToothIcon />
                 <SidebarLabel>Settings</SidebarLabel>
+              </SidebarItem>
+              <SidebarItem href="/threed" current={pathname.startsWith('/threed')}>
+                <Cog6ToothIcon />
+                <SidebarLabel>5D</SidebarLabel>
               </SidebarItem>
             </SidebarSection>
 
