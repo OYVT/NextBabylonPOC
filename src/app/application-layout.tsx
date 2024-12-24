@@ -145,7 +145,7 @@ export function ApplicationLayout({
               </SidebarItem>
               <SidebarItem href="/threed" current={pathname.startsWith('/threed')}>
                 <Cog6ToothIcon />
-                <SidebarLabel>5D</SidebarLabel>
+                <SidebarLabel>3D</SidebarLabel>
               </SidebarItem>
             </SidebarSection>
 
