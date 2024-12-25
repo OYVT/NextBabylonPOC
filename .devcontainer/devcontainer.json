@@ -38,7 +38,9 @@
 				"dbaeumer.vscode-eslint",
 				"GitHub.vscode-pull-request-github",
 				"esbenp.prettier-vscode",
-				"ms-ossdata.vscode-postgresql"
+				"ms-ossdata.vscode-postgresql",
+				"ms-edgedevtools.vscode-edge-devtools",
+				"bradlc.vscode-tailwindcss"
 			]
 		}
 	}

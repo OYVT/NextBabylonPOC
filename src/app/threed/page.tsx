@@ -1,27 +1,14 @@
-'use client'
-
 import Head from "next/head"
-import dynamic from "next/dynamic"
 import React, { useEffect, useState } from "react"
-import { Badge } from '@/components/badge'
 import { Button } from '@/components/button'
-import { Divider } from '@/components/divider'
-import { Dropdown, DropdownButton, DropdownItem, DropdownMenu } from '@/components/dropdown'
 import { Heading } from '@/components/heading'
 import { Input, InputGroup } from '@/components/input'
-import { Link } from '@/components/link'
 import { Select } from '@/components/select'
-import { getEvents } from '@/data'
-import { EllipsisVerticalIcon, MagnifyingGlassIcon } from '@heroicons/react/16/solid'
+import { BabylonView } from '@/components/babylon-scene'
+import { MagnifyingGlassIcon } from '@heroicons/react/16/solid'
 
-// Load BabylonScene component only on the client side.
-const BabylonScene = dynamic(() => import(`@/components/babylon-scene`), { ssr: false })
 
 export default function Threed(props: any) {
-    const [loaded, setLoaded] = useState(false)
-
-    useEffect(() => { setLoaded(true) })
-
     return (
         <>
         <div className="flex flex-wrap items-end justify-between gap-4">
@@ -48,7 +35,7 @@ export default function Threed(props: any) {
         <Head>
             <title>3 Designer</title>
         </Head>
-        {loaded && <BabylonScene className="mt-10" />}
+        <BabylonView className="mt-10 w-full" />
         </>
     )
 }

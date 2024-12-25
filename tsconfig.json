@@ -27,7 +27,7 @@
       ]
     },
     "target": "ES2017",
-    "types": ["babylonjs"]
+    "forceConsistentCasingInFileNames": true
   },
   "include": [
     "next-env.d.ts",
