@@ -35,11 +35,6 @@ export const BabylonView = memo(function InnerBabylonView(
         camera.attachControl()
         const light = new BABYLON.HemisphericLight("Light", new BABYLON.Vector3(0.33, 1, -0.67), sceneRef.current)
         light.intensity = 0.9
-        //const texture = new Texture(`/images/texture.png`, scene)
-        //const mat = new BABYLON.StandardMaterial("Material", sceneRef.current)
-        //mat.diffuseTexture = texture
-        //const box = BABYLON.MeshBuilder.CreateBox("box", { size: 1 }, sceneRef.current)
-        //box.material = mat
 
         // Engine render loop
         engine.runRenderLoop(() => engine.scenes.forEach(scene => {
@@ -56,7 +51,6 @@ export const BabylonView = memo(function InnerBabylonView(
     }, [canvasRef]);
 
     return (
-        // noinspection HtmlUnknownAttribute,HtmlRequiredTitleElement,JSUnresolvedLibraryURL
         <>
             <canvas ref={canvasRef} className={className} />
         </>
