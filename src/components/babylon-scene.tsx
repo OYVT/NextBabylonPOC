@@ -1,7 +1,7 @@
 'use client'
 
 import React, { useEffect, useRef, memo } from 'react'
-import {
+/*import {
   ArcRotateCamera,
   MeshBuilder,
   Scene,
@@ -9,14 +9,17 @@ import {
   HemisphericLight,
   StandardMaterial,
   Texture,
-  Vector3
-} from "@babylonjs/core"
+  Vector3,
+  Camera
+} from "@babylonjs/core"*/
+import * as BABYLON from '@babylonjs/core';
 
 interface BabylonViewProps {
     className? : string
 }
 
-export const BabylonView = memo(function InnerBabylonView( 
+//#region Non-BabylonViewer implementation
+/*export const BabylonView = memo(function InnerBabylonView( 
     { className }: BabylonViewProps
 ) {
     const canvasRef = useRef<HTMLCanvasElement>(null);
@@ -45,4 +48,44 @@ export const BabylonView = memo(function InnerBabylonView(
             <canvas ref={canvasRef} className={className} />
         </>
     )
-});
+});*/
+//#endregion
+
+
+
+export const BabylonView = function InnerBabylonView( 
+    { className }: BabylonViewProps
+) {
+    const canvasRef = useRef(null);
+    const viewerRef = useRef<Viewer | null>(null);
+    
+    if (viewerRef.current) {
+        viewerRef.current.cameraAutoOrbit = { enabled: false };
+    }
+
+    useEffect(() => {
+        if (!canvasRef.current) 
+            return;
+
+        const viewerPromise = createViewerForCanvas(canvasRef.current, 
+            {
+                engine: 'WebGPU',
+                onInitialized: (details) => {
+                console.log('DETAILS', details);
+            },
+        });
+
+        viewerPromise.then((viewer) => {
+            viewer.loadModel("https://playground.babylonjs.com/scenes/BoomBox.glb");
+            viewer.onModelChanged.add(() => {
+                console.log('Model changed');
+                viewerRef.current = viewer;
+                viewer.cameraAutoOrbit = { enabled: false };
+            });
+        });
+
+        return () => {};
+    }, [canvasRef]);
+
+    return <canvas ref={canvasRef} className={className} />;
+}
