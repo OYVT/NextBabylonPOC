@@ -1,0 +1,237 @@
+{
+    "tags": null,
+    "name": "node",
+    "editorData": {
+      "locations": [
+        {
+          "blockId": 4,
+          "x": 500,
+          "y": 400,
+          "isCollapsed": false
+        },
+        {
+          "blockId": 73,
+          "x": 240,
+          "y": 340,
+          "isCollapsed": false
+        },
+        {
+          "blockId": 74,
+          "x": 0,
+          "y": 420,
+          "isCollapsed": false
+        },
+        {
+          "blockId": 2,
+          "x": 240,
+          "y": 0,
+          "isCollapsed": false
+        },
+        {
+          "blockId": 3,
+          "x": 0,
+          "y": 40,
+          "isCollapsed": false
+        },
+        {
+          "blockId": 48,
+          "x": 0,
+          "y": 200,
+          "isCollapsed": false
+        }
+      ],
+      "frames": [],
+      "x": 63.333251953125,
+      "y": 92,
+      "zoom": 1
+    },
+    "customType": "BABYLON.NodeGeometry",
+    "outputNodeId": 4,
+    "blocks": [
+      {
+        "customType": "BABYLON.GeometryOutputBlock",
+        "id": 4,
+        "name": "Geometry Output",
+        "visibleOnFrame": false,
+        "inputs": [
+          {
+            "name": "geometry",
+            "inputName": "geometry",
+            "targetBlockId": 73,
+            "targetConnectionName": "geometry",
+            "isExposedOnFrame": true,
+            "exposedPortPosition": -1
+          }
+        ],
+        "outputs": []
+      },
+      {
+        "customType": "BABYLON.IcoSphereBlock",
+        "id": 73,
+        "name": "IcoSphere",
+        "visibleOnFrame": false,
+        "inputs": [
+          {
+            "name": "radius",
+            "valueType": "number",
+            "value": 1,
+            "inputName": "radius",
+            "targetBlockId": 74,
+            "targetConnectionName": "output",
+            "isExposedOnFrame": true,
+            "exposedPortPosition": -1
+          },
+          {
+            "name": "radiusX",
+            "valueType": "number",
+            "value": 0
+          },
+          {
+            "name": "radiusY",
+            "valueType": "number",
+            "value": 0
+          },
+          {
+            "name": "radiusZ",
+            "valueType": "number",
+            "value": 0
+          },
+          {
+            "name": "subdivisions",
+            "valueType": "number",
+            "value": 3
+          }
+        ],
+        "outputs": [
+          {
+            "name": "geometry"
+          }
+        ],
+        "evaluateContext": false
+      },
+      {
+        "customType": "BABYLON.GeometryInputBlock",
+        "id": 74,
+        "name": "Radius",
+        "visibleOnFrame": false,
+        "inputs": [],
+        "outputs": [
+          {
+            "name": "output"
+          }
+        ],
+        "type": 1,
+        "contextualValue": 0,
+        "min": 0,
+        "max": 0,
+        "groupInInspector": "",
+        "displayInInspector": true,
+        "valueType": "number",
+        "value": 10
+      },
+      {
+        "customType": "BABYLON.BoxBlock",
+        "id": 2,
+        "name": "Box",
+        "visibleOnFrame": false,
+        "inputs": [
+          {
+            "name": "size",
+            "valueType": "number",
+            "value": 1,
+            "inputName": "size",
+            "targetBlockId": 3,
+            "targetConnectionName": "output",
+            "isExposedOnFrame": true,
+            "exposedPortPosition": -1
+          },
+          {
+            "name": "width",
+            "valueType": "number",
+            "value": 0
+          },
+          {
+            "name": "height",
+            "valueType": "number",
+            "value": 0
+          },
+          {
+            "name": "depth",
+            "valueType": "number",
+            "value": 0
+          },
+          {
+            "name": "subdivisions",
+            "valueType": "number",
+            "value": 1,
+            "inputName": "subdivisions",
+            "targetBlockId": 48,
+            "targetConnectionName": "output",
+            "isExposedOnFrame": true,
+            "exposedPortPosition": -1
+          },
+          {
+            "name": "subdivisionsX",
+            "valueType": "number",
+            "value": 0
+          },
+          {
+            "name": "subdivisionsY",
+            "valueType": "number",
+            "value": 0
+          },
+          {
+            "name": "subdivisionsZ",
+            "valueType": "number",
+            "value": 0
+          }
+        ],
+        "outputs": [
+          {
+            "name": "geometry"
+          }
+        ],
+        "evaluateContext": false
+      },
+      {
+        "customType": "BABYLON.GeometryInputBlock",
+        "id": 3,
+        "name": "Size",
+        "visibleOnFrame": false,
+        "inputs": [],
+        "outputs": [
+          {
+            "name": "output"
+          }
+        ],
+        "type": 2,
+        "contextualValue": 0,
+        "min": 0,
+        "max": 0,
+        "groupInInspector": "",
+        "displayInInspector": true,
+        "valueType": "number",
+        "value": 1
+      },
+      {
+        "customType": "BABYLON.GeometryInputBlock",
+        "id": 48,
+        "name": "Int",
+        "visibleOnFrame": false,
+        "inputs": [],
+        "outputs": [
+          {
+            "name": "output"
+          }
+        ],
+        "type": 1,
+        "contextualValue": 0,
+        "min": 0,
+        "max": 0,
+        "groupInInspector": "",
+        "displayInInspector": true,
+        "valueType": "number",
+        "value": 10
+      }
+    ]
+  }
