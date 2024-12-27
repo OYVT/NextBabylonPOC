@@ -12,7 +12,7 @@ import React, { useEffect, useRef, memo } from 'react'
   Vector3,
   Camera
 } from "@babylonjs/core"*/
-import * as BABYLON from '@babylonjs/core';
+import { Viewer, createViewerForCanvas } from '@babylonjs/viewer';
 
 interface BabylonViewProps {
     className? : string
