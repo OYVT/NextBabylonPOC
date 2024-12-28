@@ -6,8 +6,8 @@ import { ApplicationLayout } from './application-layout'
 
 export const metadata: Metadata = {
   title: {
-    template: '%s - Oreal',
-    default: 'Oreal',
+    template: '%s - Next Babylon',
+    default: 'Next Babylon',
   },
   description: '',
 }

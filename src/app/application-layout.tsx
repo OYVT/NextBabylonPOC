@@ -98,8 +98,8 @@ export function ApplicationLayout({
           <SidebarHeader>
             <Dropdown>
               <DropdownButton as={SidebarItem}>
-                <Avatar src="/teams/oreal.svg" />
-                <SidebarLabel>Oreal</SidebarLabel>
+                <Avatar src="/teams/nextBabylon.svg" />
+                <SidebarLabel>Next Babylon</SidebarLabel>
                 <ChevronDownIcon />
               </DropdownButton>
               <DropdownMenu className="min-w-80 lg:min-w-64" anchor="bottom start">
@@ -109,8 +109,8 @@ export function ApplicationLayout({
                 </DropdownItem>
                 <DropdownDivider />
                 <DropdownItem href="#">
-                  <Avatar slot="icon" src="/teams/oreal.svg" />
-                  <DropdownLabel>Oreal</DropdownLabel>
+                  <Avatar slot="icon" src="/teams/nextBabylon.svg" />
+                  <DropdownLabel>Next Babylon</DropdownLabel>
                 </DropdownItem>
                 <DropdownItem href="#">
                   <Avatar slot="icon" initials="BE" className="bg-purple-500 text-white" />

@@ -1,4 +1,6 @@
-# Oreal WebApp
+# POC: NextJS + BabylonJS
+
+Proof of concept to utilize NextJS + BabylonJS.
 
 To run, first install the npm dependencies:
 

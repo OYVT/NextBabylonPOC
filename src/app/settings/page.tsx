@@ -26,7 +26,7 @@ export default function Settings() {
           <Text>This will be displayed on your public profile.</Text>
         </div>
         <div>
-          <Input aria-label="Organization Name" name="name" defaultValue="Oreal" />
+          <Input aria-label="Organization Name" name="name" defaultValue="Next Babylon" />
         </div>
       </section>
 
