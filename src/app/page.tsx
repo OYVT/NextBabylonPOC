@@ -22,7 +22,6 @@ export function Stat({ title, value, change }: { title: string; value: string; c
 
 export default async function Home() {
   let orders = await getRecentOrders()
-  console.log('asdfasdasfx');
 
   return (
     <>
